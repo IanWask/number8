@@ -38,30 +38,44 @@ class MaycieScreen extends StatelessWidget {
         title: const Text('About Me'),
         backgroundColor: Colors.blueAccent,
       ),
-  body: Column(
-  children: const [
-    SizedBox(height: 20),
-    Center(
-      child: CircleAvatar(
-        radius: 60,
-        backgroundImage: AssetImage('assets/profile.jpg'),
+body: Padding(
+  padding: const EdgeInsets.all(16.0),
+  child: Column(
+    crossAxisAlignment: CrossAxisAlignment.start,
+    children: const [
+      Center(
+        child: CircleAvatar(
+          radius: 60,
+          backgroundImage: AssetImage('assets/profile.jpg'),
+        ),
       ),
-    ),
-    SizedBox(height: 20),
-    Center(
-      child: Text(
-        'Your Name',
-        style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+      SizedBox(height: 20),
+      Center(
+        child: Text(
+          'Your Name',
+          style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+        ),
       ),
-    ),
-    SizedBox(height: 10),
-    Center(
-      child: Text(
-        'Flutter Developer | Tech Enthusiast',
-        style: TextStyle(fontSize: 16, color: Colors.grey),
+      SizedBox(height: 10),
+      Center(
+        child: Text(
+          'Flutter Developer | Tech Enthusiast',
+          style: TextStyle(fontSize: 16, color: Colors.grey),
+        ),
       ),
-    ),
-  ],
+      SizedBox(height: 20),
+      Text(
+        'About Me:',
+        style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+      ),
+      SizedBox(height: 10),
+      Text(
+        'I am a passionate Flutter developer who enjoys building beautiful and functional applications. '
+        'With experience in UI/UX design, I love to craft seamless user experiences.',
+        style: TextStyle(fontSize: 16),
+      ),
+    ],
+  ),
 ),
     );
   }
