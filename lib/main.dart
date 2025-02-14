@@ -39,23 +39,30 @@ class MaycieScreen extends StatelessWidget {
         backgroundColor: Colors.blueAccent,
       ),
   body: Column(
-        children: const [
-          SizedBox(height: 20),
-          Center(
-            child: CircleAvatar(
-              radius: 60,
-              backgroundImage: AssetImage('assets/profile.jpg'),
-            ),
-          ),
-          SizedBox(height: 20),
-          Center(
-            child: Text(
-              'Welcome to my About Me page!',
-              style: TextStyle(fontSize: 18),
-            ),
-          ),
-        ],
+  children: const [
+    SizedBox(height: 20),
+    Center(
+      child: CircleAvatar(
+        radius: 60,
+        backgroundImage: AssetImage('assets/profile.jpg'),
       ),
+    ),
+    SizedBox(height: 20),
+    Center(
+      child: Text(
+        'Your Name',
+        style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+      ),
+    ),
+    SizedBox(height: 10),
+    Center(
+      child: Text(
+        'Flutter Developer | Tech Enthusiast',
+        style: TextStyle(fontSize: 16, color: Colors.grey),
+      ),
+    ),
+  ],
+),
     );
   }
 }
