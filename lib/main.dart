@@ -38,7 +38,7 @@ class MaycieScreen extends StatelessWidget {
         title: const Text('About Me'),
         backgroundColor: Colors.blueAccent,
       ),
-      body: Column(
+  body: Column(
         children: const [
           SizedBox(height: 20),
           Center(
