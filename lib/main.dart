@@ -226,6 +226,26 @@ class _DogGameScreenState extends State<DogGameScreen>
   }
 
   void _resetGame() {
+    setState(() {
+      _isFlying = false;
+      _chargePower = 0;
+      _frisbeeTime = 0;
+      _flightController.stop();
+
+      //reset frisbee(thats actually a ball)
+      _frisbeeX = 59;
+      _frisbeeY = 435;
+      _frisbeeXStart = 59;
+      _frisbeeYStart = 435;
+
+      //reset dog
+      _dogX = 500;
+      final dogGroundY = _screenHeight - 120 - _dogHeight;
+      _dogY = dogGroundY;
+      _dogStartX = 500;
+      _dogStartY = dogGroundY;
+      _dogFacingRight = true;
+    });
   }
 
   void _throwFrisbee() {
