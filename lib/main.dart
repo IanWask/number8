@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
       ),
       routes: {
         '/': (context) => const DogGameScreen(),
-        '/blank': (context) => const BlankScreen(),
+        '/blank': (context) => const MaycieScreen(),
       },
       initialRoute: '/',
     );
@@ -28,8 +28,8 @@ class MyApp extends StatelessWidget {
 }
 
 /// A blank screen
-class BlankScreen extends StatelessWidget {
-  const BlankScreen({super.key});
+class MaycieScreen extends StatelessWidget {
+  const MaycieScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
