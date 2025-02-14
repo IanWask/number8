@@ -18,10 +18,37 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      
+      routes: {
+        '/': (context) => const DogGameScreen(),
+        '/blank': (context) => const BlankScreen(),
+      },
+      initialRoute: '/',
     );
   }
 }
+
+/// A blank screen
+class BlankScreen extends StatelessWidget {
+  const BlankScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Blank Screen'),
+      ),
+      body: Center(
+        child: ElevatedButton(
+          onPressed: () {
+            Navigator.of(context).pop();
+          },
+          child: const Text('Go Back to Game'),
+        ),
+      ),
+    );
+  }
+}
+
 
 
 
