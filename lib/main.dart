@@ -38,11 +38,23 @@ class MaycieScreen extends StatelessWidget {
         title: const Text('About Me'),
         backgroundColor: Colors.blueAccent,
       ),
-      body: const Center(
-        child: Text(
-          'Welcome to my About Me page!',
-          style: TextStyle(fontSize: 18),
-        ),
+      body: Column(
+        children: const [
+          SizedBox(height: 20),
+          Center(
+            child: CircleAvatar(
+              radius: 60,
+              backgroundImage: AssetImage('assets/profile.jpg'),
+            ),
+          ),
+          SizedBox(height: 20),
+          Center(
+            child: Text(
+              'Welcome to my About Me page!',
+              style: TextStyle(fontSize: 18),
+            ),
+          ),
+        ],
       ),
     );
   }
