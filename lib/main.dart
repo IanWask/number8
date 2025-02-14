@@ -386,6 +386,25 @@ class _DogGameScreenState extends State<DogGameScreen>
                   ),
                 ),
 
+                // Dog (walks horizontally flips if facing left)
+                Positioned(
+                  left: _dogX,
+                  top: _dogY,
+                  child: Transform(
+                    alignment: Alignment.center,
+                    transform: _dogFacingRight
+                        ? Matrix4.identity()
+                        : Matrix4.diagonal3Values(-1, 1, 1),
+                    child: Image.asset(
+                      'assets/dogrun.gif',
+                      width: _dogWidth,
+                      height: _dogHeight,
+                      fit: BoxFit.contain,
+                    ),
+                  ),
+                ),
+
+                // frisbee(a ball now)
                 Positioned(
                   left: _frisbeeX,
                   top: _frisbeeY,
