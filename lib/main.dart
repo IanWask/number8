@@ -74,6 +74,27 @@ body: Padding(
         'With experience in UI/UX design, I love to craft seamless user experiences.',
         style: TextStyle(fontSize: 16),
       ),
+      SizedBox(height: 20),
+      Text(
+        'Contact Me:',
+        style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+      ),
+      SizedBox(height: 10),
+      Row(
+        children: [
+          Icon(Icons.email, color: Colors.blueAccent),
+          SizedBox(width: 10),
+          Text('your.email@example.com'),
+        ],
+      ),
+      SizedBox(height: 10),
+      Row(
+        children: [
+          Icon(Icons.link, color: Colors.blueAccent),
+          SizedBox(width: 10),
+          Text('yourwebsite.com'),
+        ],
+      ),
     ],
   ),
 ),
