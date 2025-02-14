@@ -35,14 +35,13 @@ class MaycieScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Blank Screen'),
+        title: const Text('About Me'),
+        backgroundColor: Colors.blueAccent,
       ),
-      body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            Navigator.of(context).pop();
-          },
-          child: const Text('Go Back to Game'),
+      body: const Center(
+        child: Text(
+          'Welcome to my About Me page!',
+          style: TextStyle(fontSize: 18),
         ),
       ),
     );
